@@ -1,0 +1,81 @@
+h1 {
+    color: maroon;
+}
+
+* {
+    font-family: Verdana;
+}
+
+.tieu_de {
+    color: teal;
+}  
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+#tieu_de_bai_bao {
+    font-family: cursive;
+}
+
+/* Attribute Selector */
+a[href*='V%E1%BB%8Bnh_H%E1%BA%A1_Long'] {
+  color: lightgreen;
+}
+
+a[href*='Ph%C3%BA_Qu%E1%BB%91c'] {
+    color: lightblue;
+}
+
+a[href*='vietnamtourism'] {
+color: lightpink;
+}
+
+/* Pseudo Class Selector */
+a:hover {
+    color: darkorange;
+}
+
+.background_tieu_de {
+    background-color: aqua;
+}
+
+#dang_luc {
+    color: gray;
+}
+/* Specificity */
+h5 {
+    color: yellow;
+}
+  
+.class_tac_gia {
+color: pink;
+}
+
+#id_tac_gia {
+color: cornflowerblue;
+}
+  
+/* Chaining */
+h2.dia_diem {
+    font-family: Tahoma;
+}
+
+/* Descendant Combinator */
+.mo_ta h5 {
+    color: blueviolet;
+}
+
+/* Chaining & Specificity */
+li h4 {
+    color: gold;
+}
+
+h4 {
+    color: dodgerblue;
+}
+
+/* Multiple Selector */
+h5, li {
+    font-family: monospace;
+}
