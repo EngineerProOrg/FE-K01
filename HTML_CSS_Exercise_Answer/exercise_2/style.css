@@ -1,0 +1,9 @@
+::selection {
+    background: orange;
+    color: black;
+}
+  
+.thay-mau-khi-chon::selection {
+    background: green;
+    color: white;
+}

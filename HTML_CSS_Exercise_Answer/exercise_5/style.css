@@ -1,0 +1,48 @@
+.container {
+  display: grid;
+  place-items: center;
+  min-height: 400px;
+}
+
+.floating-stack {
+  background: #2a8aa7;
+  color: #fff;
+  height: 80vh;
+  width: 320px;
+  overflow-y: auto;
+}
+
+.floating-stack dl {
+  margin: 0 0 1rem;
+  display: grid;
+  grid-template-columns: 2.5rem 1fr;
+  align-items: center;
+}
+
+.floating-stack dt {
+  position: sticky;
+  top: 0.5rem;
+  left: 0.5rem;
+  font-weight: bold;
+  background: #272539;
+  color: #cfd8dc;
+  height: 2rem;
+  width: 2rem;
+  border-radius: 50%;
+  padding: 0.25rem 1rem;
+  grid-column: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.floating-stack dd {
+  grid-column: 2;
+  margin: 0;
+  padding: 0.75rem;
+}
+
+.floating-stack dl:first-of-type dd:first-of-type {
+  margin-top: 0.25rem;
+}
