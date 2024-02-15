@@ -1,0 +1,23 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-size: 40px;
+}
+
+.box-mot {
+    background-color: orange;
+    padding: 30px;
+    height: 100px;
+    width: 100px;
+    border: 30px solid purple;
+    margin: 60px;
+}
+
+.box-hai {
+    background-color: blue;
+    padding: 30px;
+    height: 100px;
+    width: 100px;
+    border: 30px solid green;
+    margin: 90px;
+}
