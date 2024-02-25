@@ -37,15 +37,11 @@ const discountProducts = () => {
 
 const categorizedProducts = () => {
   // TODO: Create an object where each key is a category and its value is an array of products in that category
-  const result = {};
-  products.forEach((product) => {
-    result[product.category] = result[product.category]
-      ? result[product.category]
-      : [];
-
-    result[product.category].push(product);
-  });
-  return result;
+  return products.reduce((acc, product) => {
+    acc[product.category] = acc[product.category] ? acc[product.category] : [];
+    acc[product.category].push(product);
+    return acc;
+  }, {});
 };
 
 module.exports = {
