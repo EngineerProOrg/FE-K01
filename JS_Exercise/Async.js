@@ -52,7 +52,39 @@ const fetchAndTransformData = async () => {
     }
 };
 
+async function fetchHomePage() {
+    try {
+        const [usersResponse, postsResponse, commentsResponse] =
+            await Promise.all([
+                axios.get("https://jsonplaceholder.typicode.com/users"),
+                axios.get("https://jsonplaceholder.typicode.com/posts"),
+                axios.get("https://jsonplaceholder.typicode.com/comments"),
+            ]);
+
+        const users = usersResponse.data;
+        const posts = postsResponse.data;
+        const comments = commentsResponse.data;
+
+        const dashboardData = users.map((user) => {
+            const userPosts = posts.filter((post) => post.userId === user.id).slice(-3);
+
+            const postsWithComments = userPosts.map((post) => {
+                const postComments = comments.filter((comment) => comment.postId === post.id).map(comment => comment.body).slice(0, 2);
+                return { title: post.title, comments: postComments };
+            });
+
+            return { name: user.username, posts: postsWithComments };
+        });
+
+        console.log(JSON.stringify(dashboardData));
+    } catch (error) {
+        console.error("Error fetching data:", error);
+    }
+}
+
 // Task 1
 getUsers();
 // Task 2
 fetchAndTransformData();
+// Task 3
+fetchHomePage()
